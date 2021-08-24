@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "student.h"
 #include <string.h>
+#include <ctype.h>
 
 
 int main(int argc, char *argv[]){
@@ -9,7 +10,7 @@ int main(int argc, char *argv[]){
 
 
 int c=0;
-char temporal[150];
+char temporal[70];
 
 
 FILE *inFile=fopen("fin","r");
@@ -27,7 +28,7 @@ if((salida=fopen("salida.txt","w"))==NULL){
 
  
 while(!feof(inFile)){
-fgets(temporal,150,inFile);
+fgets(temporal,70,inFile);
 
 if(c==0){
     fputs(temporal,salida);
@@ -46,6 +47,36 @@ pi++;
 pf--;
 }
 fputs(temporal,salida);
+}
+if(c==2){
+fputs(temporal,salida);
+}
+if(c==3){
+char *token;
+int sumatotal;
+sumatotal=0;
+token = strtok(temporal, " ");
+if(token==NULL){
+printf("NO hay token");
+}
+sumatotal += atoi(token);
+while(token!= NULL){
+token=strtok(NULL, " ");
+if(token!=NULL){
+sumatotal+=atoi(token);
+}
+}
+fprintf(salida,"%d\n",sumatotal);
+
+}
+if(c==4){
+fputs(temporal,salida);
+}
+if(c==5){
+
+}
+if(c==6){
+
 }
 c++;
 }
