@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "student.h"
+#include <string.h>
+
 
 int main(int argc, char *argv[]){
 // Lectura del archivo
@@ -29,6 +31,21 @@ fgets(temporal,150,inFile);
 
 if(c==0){
     fputs(temporal,salida);
+}
+if(c==1){
+int pi,pf;
+char aux;
+
+pi=0;
+pf=strlen(temporal)-1;
+while(pi<pf){
+aux=temporal[pi];
+temporal[pi]=temporal[pf];
+temporal[pf]=aux;
+pi++; 
+pf--;
+}
+fputs(temporal,salida);
 }
 c++;
 }
