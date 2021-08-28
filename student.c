@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdio.h>
+	
 
 //FEATURE1
 void feature1(FILE *fin, FILE *fout){
@@ -180,21 +181,32 @@ token=strtok(NULL,",");
 }
 }
 g=0;
-printf("sss: %s\n",nombre);
-printf("sss: %d\n",numero);
-
 pobj->nombre=nombre;
 pobj->cedula=numero;
-
 //estructutra:
 printf("nombre: %s",pobj->nombre);
-printf("cedula: %d",pobj->cedula);
+printf("cedula: %d\n",pobj->cedula);
+
 }
 c++;
 }
 
+}
+
+void feature7(FILE *fout, struct Obj_t *pobj){
+
+
+fprintf(fout,"%d,%s",pobj->cedula,pobj->nombre);
+
+
+
+//estructutra:
 
 }
+
+
+
+
 
 
 

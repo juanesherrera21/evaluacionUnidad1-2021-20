@@ -129,12 +129,6 @@ fprintf(salida,"%d\n",menor);
 }
 
 }
-if(c==5){
-
-}
-if(c==6){
-
-}
 c++;
 }
 
@@ -142,6 +136,9 @@ c++;
 struct Obj_t c1;
 
 feature6(argv[1],&c1);
+
+feature7(salida,&c1);
+
 
 return EXIT_SUCCESS;	
 	
