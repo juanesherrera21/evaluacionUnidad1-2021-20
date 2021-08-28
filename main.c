@@ -138,7 +138,10 @@ if(c==6){
 c++;
 }
 
+//DEFINIMOS ESTRUCTURA
+struct Obj_t c1;
 
+feature6(argv[1],&c1);
 
 return EXIT_SUCCESS;	
 	
