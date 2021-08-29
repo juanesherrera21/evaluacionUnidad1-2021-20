@@ -139,6 +139,9 @@ feature6(argv[1],&c1);
 
 feature7(salida,&c1);
 
+fclose(inFile);
+fclose(salida);
+
 
 return EXIT_SUCCESS;	
 	

@@ -158,7 +158,6 @@ if(fin==NULL){
  
 while(!feof(fin)){
 fgets(temporal,70,fin);
-printf("cade: %s\n",temporal);
 if(c==5){
 char *token;
 token = strtok(temporal, ",");
@@ -166,12 +165,10 @@ token = strtok(temporal, ",");
 if(token!=NULL){
 while(token != NULL)
 {if(g==0){
-printf("cadena: %s\n: ",token);
 strcpy(nombre,token);
 
 g++;
 }else{
-printf("cadena: %s\n: ",token);
 numero=atoi(token);
 break;
  }
@@ -184,8 +181,7 @@ g=0;
 pobj->nombre=nombre;
 pobj->cedula=numero;
 //estructutra:
-printf("nombre: %s",pobj->nombre);
-printf("cedula: %d\n",pobj->cedula);
+
 
 }
 c++;
@@ -203,7 +199,10 @@ fprintf(fout,"%d,%s",pobj->cedula,pobj->nombre);
 //estructutra:
 
 }
+void feature8(FILE *fin, struct _courseInfo_t **pobj,int *length){
 
+
+}
 
 
 
